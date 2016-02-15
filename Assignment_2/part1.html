@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>Javascript Guessing Game</title>
+</head>
+<body onload="do_game()">
+	<script>
+	function do_game() {
+		colours = ['black', 'blue', 'cyan', 'gold', 'green', 'ivory', 'magenta', 'olive', 'pink', 'red', 'silver', 'yellow']
+		target = Math.floor(Math.random() * colours.length)
+		colour = colours[target]
+		cnt = 0
+		finished = false
+
+		// alert(colour)
+		
+		while (!finished) {
+			guess = prompt('I am thinking of one of these colours:\n\n' + colours.join())
+			cnt += 1
+			finished = check_guess(guess)
+		}
+	}
+
+	function check_guess(guess) {
+		if (colours.indexOf(guess) == target) {
+			return true
+		}
+		return false
+	}
+	</script>
+</body>
+</html>

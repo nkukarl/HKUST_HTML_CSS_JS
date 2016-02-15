@@ -1,0 +1,306 @@
+<!-- alternatively -->
+<!-- <script src="mycode.js"></script>
+
+function surprise() {
+	alert("Hello!");
+} -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Title</title>
+	<script>
+	// alert('aloha!')
+	// confirm('r u sure?')
+	
+	// var user_name = prompt('Was is das?');
+	// document.write('Welcome ' + user_name + '!' + '\n\n');
+	
+	// var age = prompt('How old are you?')
+	// document.write('You are ' + age + '!\n\n');
+
+	var number = 1.2e4;
+	document.write('The number is ' + number + '!\n\n');
+	
+	var string = 'this is a string variable';
+	
+	var condition = true;
+
+	alert(typeof number + ' ' + typeof string + ' ' + typeof condition)
+	
+	// convert from one type to another
+	num1 = parseInt('122')
+	num2 = parseFloat('12.44')
+	str = String(123)
+
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		function greetings() {
+			alert('hello!');
+			prompt('excited?');
+		}
+	</script>
+</head>
+<body onload="greetings()">
+
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		function redirect() {
+			if (checkAge() < 18) {
+				alert('You will be directed to another website!');
+			}
+			else {
+				alert('Please enjoy the stuff here!');
+			}
+		}
+		function checkAge() {
+			age = prompt('How old are you?');
+			return parseInt(age);
+		}
+	</script>
+</head>
+<body onload="redirect()">
+
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var num = 5;
+		alert('This is a ' + num + '-time recursion:\n' + myfun(num))
+		function myfun(cnt) {
+			if (cnt > 0) {
+				return 'recur ' + myfun(cnt - 1);
+			}
+			else {
+				return '';
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var num = 10;
+		alert('The ' + num + 'th fibonacci number is ' + myfun(num));
+		function myfun(n) {
+			if (n == 1 || n == 2) {
+				return 1;
+			}
+			else {
+				return myfun(n - 1) + myfun(n - 2);
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var name = '';
+		name = prompt('was ist das?');
+		console.log('das ist eine katze');
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		user_name = prompt('what is ur name?');
+		if (user_name == 'kai') {
+			alert('great name!');
+		}
+		else if (user_name == 'KAI') {
+			alert('not bad!');
+		}
+		else {
+			alert('what are you talking about?');
+		}
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		item = prompt('was ist das?')
+		switch(item) {
+			case 'apple':
+				alert('great!');
+				break;
+			case 'banana':
+				alert('good!');
+				break;
+			default:
+				alert('aloha!')
+		}
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		n = 10
+		while (n) {
+			document.write(n + ' ' + fibo(n) + '<br>');
+			n -= 1;
+		}
+		function fibo(n) {
+			if (n == 1 || n == 2) {
+				return 1;
+			}
+			return fibo(n - 1) + fibo(n - 2);
+		}
+		
+		text = 'i have a secret.';
+		alert(text.indexOf('se'));
+
+		money = parseInt(prompt('how much money do you have?'))
+		cost = 5
+		quantity = 0
+		while (money >= cost) {
+			money -= cost
+			quantity += 1
+		}
+		alert(quantity + ' bought, $' + money + ' left.')
+
+		money = parseInt(prompt('how much money do you have?'))
+		cost = 6
+		quantity = 0
+		flag = true
+		while (flag && money >= cost) {
+			flag = confirm('continue to buy?')
+			if (flag) {
+				money -= cost
+				quantity += 1
+			}
+		}
+		alert(quantity + ' bought, $' + money + ' left.')
+
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		function show_money() {
+			var money = 3;
+			alert(money);
+			money = 7;
+		}
+		money = 5;
+		alert(money);
+		show_money();
+		alert(money);
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var pets = ['dog', 'cat','rabbit'];
+		// var A = new Array(10);
+
+		alert(pets.join()); //comma used as separator
+
+		pets.push('horse'); //insert into the end
+		pets.unshift('frog') //insert into the beginning
+
+		alert(pets.join(' & '));
+
+		pets.pop(); //remove from the end
+		pets.shift() //remove from the front
+		
+		for (var i = pets.length - 1; i >= 0; i--) {
+			alert(pets[i]);
+		};
+
+		var A = ['a', 'b', 'c']
+		var B = [1, 2, 3]
+		var AplusB = A.concat(B)
+		alert(AplusB)
+
+
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var MAX = 10000
+		var random_num = Math.floor(Math.random() * MAX)
+		alert(random_num)
+
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->

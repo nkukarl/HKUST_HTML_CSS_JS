@@ -1,0 +1,331 @@
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<script>
+			// function handleClick(event) {
+			// 	event.stopPropagation();
+
+			// 	var node = event.target;
+			// 	var thisPath = node.nodeName;
+
+			// 	while (node.parentNode) {
+			// 		node = node.parentNode;
+			// 		thisPath = node.nodeName + ' > ' + thisPath;
+			// 	}
+			// 	alert(thisPath);
+			// }
+
+			// function attachHandler(node) {
+			// 	if(node == null) return;
+			// 	node.onclick = handleClick;
+
+			// 	for (var i = 0; i < node.childNodes.length; i += 1) {
+			// 		attachHandler(node.childNodes[i])
+			// 	}
+			// }
+
+			function change_color1() {
+				document.childNodes[2].childNodes[1].childNodes[0].style.color="red";
+			}
+			function change_color2() {
+				document.getElementsByTagName("h2")[0].style.color="yellow";
+			}
+			function change_color3() {
+				document.getElementById("cute_text").style.color="blue";
+			}
+
+			function change_color4() {
+				this_node = document.getElementById("cute_text");
+				this_node.setAttribute("style", "color:aqua");
+			}
+
+
+
+		</script>
+	</head>
+	<body>
+		<h2 style="color:black" id="cute_text">Click on a button to change the color</h2>
+
+		<form>
+			<input onclick="change_color1()" type="button" value="method 1">
+			<input onclick="change_color2()" type="button" value="method 2">
+			<input onclick="change_color3()" type="button" value="method 3">
+			<input onclick="change_color4()" type="button" value="method 4">
+		</form>
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<script>
+			function addHorizontalLine() {
+				var newLine = document.createElement("hr");
+				var destParent = document.getElementsByTagName("body")[0];
+				destParent.insertBefore(newLine, destParent.firstChild);
+			}
+			function addText() {
+				var newText = document.createTextNode(" This is dynamically added text!");
+				document.getElementById("my_text").appendChild(newText);
+			}
+			function deleteElement() {
+				var elem = document.getElementById("to_be_deleted")
+				elem.parentNode.removeChild(elem);
+			}
+			function deleteAllChildren() {
+				var destParent = document.getElementsByTagName("div")[0];
+				var counter = 0;
+				while (destParent.firstChild) {
+					destParent.removeChild(destParent.firstChild);
+					counter += 1;
+				}
+				alert(counter + ' children element(s) deleted!');
+			}
+		</script>
+	</head>
+	<body>
+		<form>
+			<input onclick="addHorizontalLine()" type="button" value="Click me to add a horizontal line!">
+			<br>
+			<input onclick="addText()" type="button" value="Click me to add text!">
+			<br>
+			<input onclick="deleteElement()" type="button" value="Click me to delete element!">
+			<br>
+			<input onclick="deleteAllChildren()" type="button" value="Click me to delete multiple elements!">
+		</form>
+		<div>
+			<p id="my_text">This is my text.</p>
+			<p id="to_be_deleted">This is the text to be deleted.</p>
+		</div>
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<script>
+			function copyList() {
+				var destParent = document.getElementById("myList");
+				// var clone = destParent.lastChild.cloneNode();
+				var clone = destParent.lastChild.cloneNode(true);
+				destParent.appendChild(clone);
+			}
+		</script>
+	</head>
+	<body>
+		<ul id="myList"><li>Morgen!</li><li>Morgen!</li></ul>
+		<button onclick="copyList()">Copy it!</button>
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<script>
+			function func1 () {
+				alert('aloha!')
+			}
+			function func2 () {
+				alert('really?')
+			}
+			function func3 () {
+				document.getElementById("wasIstDas").style.color="red";
+			}
+			function func4 () {
+				document.getElementById("wasIstDas").style.color="black";
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="func1()">aloha!</button>
+		<br>
+		<button onclick="func2()">really?</button>
+		<br>
+		<button onmouseover="func3()" onmouseout="func4()" id="wasIstDas">was ist das!</button>
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<script>
+			function func1() {
+				var timer;
+				time = parseInt(prompt('How long do you want?'));
+				timer = setTimeout(reminder, time * 1000);
+			}
+			function reminder() {
+				alert('I have been waiting for ' + time + ' sec.')
+			}
+		</script>
+	</head>
+	<body onload="func1()">
+		
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<script>
+			var the_timer, x_position = 0, the_image;
+			function set_timer() {
+				the_image = document.getElementById("sheep");
+				x_position = x_position + 1;
+				the_image.style.left = x_position;
+				the_timer = setTimeout(set_timer, 50);
+			}
+			function stop() {
+				clearTimeout(the_timer);
+			}
+			//setInterval(func, time)
+			//clearInterval(func)
+		</script>
+	</head>
+	<body onload="set_timer()">
+		<img src="sheep.jpg" id="sheep" style="position:absolute; left:0">
+		<br>
+		<button onclick="stop()">Stop!</button>
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<script>
+			var the_timer, x_position = 0, the_image;
+			function do_timer() {
+				the_image = document.getElementById("sheep");
+				x_position += 1;
+				the_image.style.left = x_position;
+			}
+		</script>
+	</head>
+	<body onload="the_timer=setInterval(do_timer, 50)">
+		<img src="sheep.jpg" id="sheep" style="position:absolute; left:0">
+		<br>
+		<button onclick="clearInterval(the_timer)">Stop!</button>
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<script>
+			function do_something() {
+				alert('Page has loaded!');
+			}
+			window.onload = do_something();
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<script>
+			function do_something() {
+				alert('Page has loaded!');
+			}
+			window.addEventListener("load", do_something);
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+	</head>
+	<body>
+		<button id="btn0" onclick="alert('aloha')">Click me!</button>
+		<button id="btn1">Remove listener</button>
+		<script>
+			function do_something() {
+				alert('was ist das');
+			}
+			var btn0 = document.getElementById("btn0");
+			btn0.addEventListener("click", do_something);
+
+			var btn1 = document.getElementById("btn1");
+			btn1.addEventListener("click", function() {
+				btn0.removeEventListener("click", do_something);
+			});
+		</script>
+	</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+	</head>
+	<body>
+		<script>
+			function check(a, b) {
+				if (b != 0) return true;
+				return false;
+			}
+			function myDivide(func, num, div) {
+				if (func(num, div)) {
+					alert(num / div);
+				}
+				else {
+					alert('aloha!');
+				}
+			}
+			num1 = parseInt(prompt('number 1:'));
+			num2 = parseInt(prompt('number 2:'));
+			myDivide(check, num1, num2);
+		</script>
+	</body>
+</html> -->
+
+<!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+	</head>
+	<body>
+		<script>
+			function counter() {
+				var count = 0;
+				return function() {
+					count ++;
+					alert(count + '!')
+				}
+			}
+			var count = counter();
+			count();
+			count();
+			count();
+		</script>
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+	<head>
+		<title>My website</title>
+		<meta name="author" content='KW'>
+		<!-- reload page every 1 second -->
+		<meta http-equiv="refresh" content="1">
+		<style>
+			div {position:absolute}
+		</style>
+	</head>
+	<body id="theBody" onload="show_pattern()">
+		<script>
+
+			var top_pos = 25, left_pos = 25;
+			var width = 500, height = 500;
+			var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+			var the_body = document.getElementById("theBody");
+			
+			while (width > 50) {
+				var this_div = document.createElement("div");
+				var random_color = colors[Math.floor(Math.random() * 7)];
+
+				// this_div.setAttribute("style", "top:" + top_pos + "px");
+				// this_div.setAttribute("style", "left:" + left_pos + "px");
+				// this_div.setAttribute("style", "width:" + width + "px");
+				// this_div.setAttribute("style", "height:" + height + "px");
+				// this_div.setAttribute("style", "background:" + random_color);
+
+				this_div.style.top = top_pos + "px";
+				this_div.style.left = left_pos + "px";
+				this_div.style.width = width + "px";
+				this_div.style.height = height + "px";
+				this_div.style.background = random_color;
+
+				the_body.appendChild(this_div);
+
+				top_pos += 10;
+				left_pos += 10;
+				width -= 20;
+				height -= 20;
+			}
+		</script>
+	</body>
+</html>

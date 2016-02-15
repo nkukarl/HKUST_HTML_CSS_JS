@@ -1,0 +1,168 @@
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var continents = ['Oceania', 'Africa', 'Antarctica', 'Europe', 'America', 'Asia'];
+		var response, count = 0;
+		for (var i = 0; i < continents.length; i++) {
+			response = confirm('Have you been to ' + continents[i] + '?');
+			if (response)
+				count ++;
+		};
+		alert('You have been to ' + count + ' continent(s).')
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var personalDetails = {initials: 'KW', age: 26, title: 'Dr.'};
+		for (var prop in personalDetails) {
+			alert(prop + ' = ' + personalDetails[prop])
+		}	
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var nums = [2, 3, 5, 7, 11, 13]
+		for (var n of nums) {
+			alert(nums.indexOf(n) + ': ' + n)
+		}	
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var total = 0;
+		while (true) {
+			amount = parseFloat(prompt('how much money?'))
+			if (amount > 0) {
+				total += amount;
+			}
+			else {
+				alert('Total: ' + total)
+				break
+			}
+		}
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		var year, great_year = [];
+		for (year = 2014; year < 2017; year += 1) {
+			answer = confirm(year + ' is great for you?');
+			if (answer) {
+				great_year.push(year);
+			}
+			else {
+				continue;
+			}
+		}
+		alert('Your great year: ' + great_year.join(', '))
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!-- <!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+		// var pets = ['dog', 'cat', 'rabbit', 'fish'];
+		// pets.sort();
+		// alert(pets);
+		// pets.reverse();
+		// alert(pets);
+		// alert(pets.indexOf('rabbit'));
+
+		// var nums = [3, 4, 2, 5, 7, 1, 9];
+		// nums.sort().reverse();
+		// alert(nums);
+
+		// chars = ['a', 'b', 'b', 'a', 'c', 'a', 'a', 'a'];
+		// id = 0;
+		// pos = [];
+		// while (true) {
+		// 	temp = chars.indexOf('a', id);
+		// 	if (temp == -1) {
+		// 		break;
+		// 	}
+		// 	// alert(temp)
+		// 	pos.push(temp);
+		// 	id = temp + 1;
+		// }
+		// alert(pos.length + ' occurrence(s) found: at index ' + pos.join(', '))
+
+		// alert('Last index of \'a\': ' + chars.lastIndexOf('a'))
+
+		// nums = [1, 2, 3, 4, 5, 6]
+		// alert(nums.slice(1))
+		// alert(nums.slice(1, 5)) // does not affect nums
+
+		// // array.splice(position, quantity), returns the removed element(s)
+		// alert(nums.splice(1, 3)) // does affect nums
+		// alert(nums)
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html> -->
+
+<!doctype html>
+<html>
+<head>
+	<title>Example of a function</title>
+	<script>
+	// chars = ['a', 'b', 'c', 'd', 'e'];
+	// chars.forEach(alert);
+
+	// numbers = [1, 2, 3, 4, 5];
+	// numbers.forEach(function(elem, idx, arr) {
+	// 	arr[idx] = elem * elem;
+	// });
+	// alert(numbers)
+
+	numbers = [11, 12, 13, 14, 15];
+	square = function(elem) {return elem * elem;}
+	results = numbers.map(square);
+	alert(results);
+	</script>
+</head>
+<body>
+	<p>this is the body!</p>
+</body>
+</html>
